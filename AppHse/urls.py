@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from AppHse.views import documentos, show_html
+from AppHse.views import documentos, show_html, hsecampo
 
 
 urlpatterns = [
     path('show', admin.site.urls),
     path('analisis_riesgo/', show_html),
+    path('hsecampo/', hsecampo)
 ]

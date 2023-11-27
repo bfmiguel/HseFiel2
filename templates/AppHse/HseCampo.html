@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block cambio %}
+    {% for analisis in analisis_De_Riesgo %}
+        <h6>el documento es:  {{analisis_De_Riesgo.nombre}} en la operacion {{analisis_De_Riesgo.operacion}}</h6>
+        <hr>
+    {% endfor %}
+
+{% endblock %}

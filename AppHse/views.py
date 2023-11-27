@@ -2,6 +2,13 @@ from django.shortcuts import render
 from AppHse.models import analisis_De_Riesgo
 from django.http import HttpResponse
 
+def hsecampo(request):
+    analisis = analisis_De_Riesgo.objects.all()
+    contexto = {
+        "analisis" : analisis_De_Riesgo
+    }
+
+    return render(request, "AppHse/HseCampo.html", contexto)
 
 def documentos(request):
     analisis = analisis_De_Riesgo(nombre="DTM", Operacion="Drilling")

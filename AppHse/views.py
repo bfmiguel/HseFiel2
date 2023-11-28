@@ -19,6 +19,10 @@ def documentos(request):
     return HttpResponse(f" Se verifico el documento {analisis.nombre} durante las operaciones de {analisis.Operacion}")
 
 def permiso_trabajo_from(request):
+
+    if request.method == "POST":
+        return redirect("app/permiso_trabajo/")
+
     permiso_trabajo_formulario = permisotrabajoForms()
     contexto = {
         "form": permiso_trabajo_formulario

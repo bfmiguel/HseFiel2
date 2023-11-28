@@ -13,6 +13,7 @@ class permiso_de_trabajo(models.Model):
     numero =  models.IntegerField()
 
 
+
 class trabajo_altura(models.Model):
     nombre = models.CharField(max_length=40)
     Operacion = models.CharField(max_length=40)

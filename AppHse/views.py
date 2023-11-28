@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from AppHse.models import analisis_De_Riesgo
 from django.http import HttpResponse
-from AppHse.forms import permisotrabajoForms
+from AppHse.forms import permisotrabajoForms, busquedaform
 
 def hsecampo(request):
     analisis = analisis_De_Riesgo.objects.all()
@@ -31,6 +31,13 @@ def permiso_trabajo_from(request):
 
     return render(request, "AppHse/permisotrabajo.html", contexto)
 
+def busqueda(request):
+
+
 def show_html(request):
-    contexto = {'nombre': 'Sup. Miguel Batista'}
+    contexto = {
+        "nombre": 'Sup. Miguel Batista',
+        "form": busquedaform()
+
+    }
     return render(request, 'index.html', contexto)
